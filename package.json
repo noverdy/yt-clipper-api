@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@alpacamybags118/yt-dlp-exec": "^0.1.0",
     "@hapi/hapi": "^20.2.1",
     "@hapi/inert": "^6.0.4",
     "fluent-ffmpeg": "^2.1.2",

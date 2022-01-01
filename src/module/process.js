@@ -3,9 +3,9 @@ const fs = require('fs')
 const getVideoId = require('youtube-video-id')
 const { nanoid } = require('nanoid')
 const path = require('path')
-const video = require('fluent-ffmpeg/lib/options/video')
-const youtubedl = require('youtube-dl-exec')
+const { create: createYoutubeDl } = require('youtube-dl-exec')
 
+const youtubedl = createYoutubeDl(path.resolve('bin/yt-dlp.exe'))
 const status = {}
 
 const processVideo = (url, start, end, processId) => {
