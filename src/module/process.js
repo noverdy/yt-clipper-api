@@ -23,6 +23,8 @@ const processVideo = (url, start, end, processId) => {
 	youtubedl(url, {
 		output: tempname,
 		restrictFilenames: true,
+		format: 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio',
+		mergeOutputFormat: 'mp4',
 	}).then(() => {
 		ffmpeg(tempname)
 			.setStartTime(start)
