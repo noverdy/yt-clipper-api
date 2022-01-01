@@ -40,7 +40,7 @@ const processVideo = (url, start, end, processId) => {
 						console.log(err)
 					})
 					delete status[processId]
-				}, 1 * 60 * 1000)
+				}, 10 * 60 * 1000)
 			})
 			.on('error', (err) => {
 				console.log(err)
