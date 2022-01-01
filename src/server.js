@@ -10,10 +10,7 @@ const init = async () => {
 				origin:
 					process.env.NODE_ENV === 'production'
 						? ['https://noverdy.github.io/']
-						: [
-								'https://noverdy.github.io/',
-								'https://localhost:5500',
-						  ],
+						: ['*'],
 			},
 		},
 	})
