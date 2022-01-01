@@ -7,10 +7,7 @@ const init = async () => {
 		host: process.env.NODE_ENV === 'production' ? '0.0.0.0' : 'localhost',
 		routes: {
 			cors: {
-				origin:
-					process.env.NODE_ENV === 'production'
-						? ['https://noverdy.github.io/']
-						: ['*'],
+				origin: ['*'],
 			},
 		},
 	})
