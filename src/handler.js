@@ -71,7 +71,16 @@ const getVideoStatusHandler = (request, h) => {
 
 const getVideoFileHandler = (request, h) => {
 	const { id } = request.query
-	const outputpath = getStatus(id).path
+	const status = getStatus(id)
+	if (status === undefined) {
+		const response = h.response({
+			status: 'fail',
+			message: 'invalid id',
+		})
+		response.code(400)
+		return response
+	}
+	const outputpath = status.path
 	return h.file(outputpath, {
 		mode: 'attachment',
 	})
