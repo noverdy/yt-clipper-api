@@ -5,7 +5,7 @@ const { nanoid } = require('nanoid')
 const path = require('path')
 const { create: createYoutubeDl } = require('youtube-dl-exec')
 
-const youtubedl = createYoutubeDl(path.resolve('bin/yt-dlp.exe'))
+const youtubedl = createYoutubeDl(path.resolve('bin/yt-dlp'))
 const status = {}
 
 const processVideo = (url, start, end, processId) => {

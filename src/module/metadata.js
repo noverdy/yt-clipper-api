@@ -1,6 +1,6 @@
 const path = require('path')
 const { create: createYoutubeDl } = require('youtube-dl-exec')
-const youtubedl = createYoutubeDl(path.resolve('bin/yt-dlp.exe'))
+const youtubedl = createYoutubeDl(path.resolve('bin/yt-dlp'))
 
 const getMetadata = (url) => {
 	return new Promise((resolve, reject) => {
