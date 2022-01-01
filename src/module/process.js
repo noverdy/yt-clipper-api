@@ -6,9 +6,6 @@ const path = require('path')
 const video = require('fluent-ffmpeg/lib/options/video')
 const youtubedl = require('youtube-dl-exec')
 
-ffmpeg.setFfmpegPath(path.resolve('bin/ffmpeg/bin/ffmpeg.exe'))
-ffmpeg.setFfprobePath(path.resolve('bin/ffmpeg/bin/ffmpeg.exe'))
-
 const status = {}
 
 const processVideo = (url, start, end, processId) => {
